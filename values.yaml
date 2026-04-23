@@ -1,0 +1,47 @@
+replicaCount: 1
+
+
+# Настройки образа
+
+image:
+
+  repository: vilkinss/fixit
+
+  tag: latest
+
+  pullPolicy: Never
+
+
+# Настройки сервиса
+
+service:
+
+  type: NodePort
+
+  port: 8080
+
+  targetPort: 8080
+
+  nodePort: 30080
+
+
+# Настройки ресурсов
+
+resources:
+
+  limits:
+
+    cpu: 500m
+
+    memory: 512Mi
+
+  requests:
+
+    cpu: 250m
+
+    memory: 256Mi
+
+
+# Название приложения для labels
+
+appName: fixit
